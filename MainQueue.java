@@ -15,7 +15,7 @@ public class MainQueue {
 			this.next=null;			
 		}
 	}
-	static Node head;
+	//static Node head;
 	
 	static Node push(Node head,int d,int p)
 	{
@@ -49,12 +49,12 @@ public class MainQueue {
 		return head.data;
 	}
 	
-	static void pop()
+	static Node pop(Node head)
 	{
 		Node temp=head;
 		System.out.println("Deleted Node is  "+temp.data);
 		head=head.next;
-		//return head;
+		return head;
 	}
 	
 
@@ -67,6 +67,7 @@ public class MainQueue {
 		while(!isEmpty(pq))
 		{
 			System.out.printf("%d",peek(pq));
+			pop(pq);
 			
 		}
 
